@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:8080/api'
+const API_BASE_URL = import.meta.env.DEV ? 'http://localhost:8080/api' : '/api'
 const ACCESS_TOKEN_KEY = 'campaign-manager-access-token'
 const USER_KEY = 'campaign-manager-user'
 

@@ -1,6 +1,6 @@
 import { getAccessToken } from './auth.js'
 
-const API_BASE_URL = 'http://localhost:8080/api'
+const API_BASE_URL = import.meta.env.DEV ? 'http://localhost:8080/api' : '/api'
 
 async function parseResponse(response) {
   const contentType = response.headers.get('content-type') || ''
